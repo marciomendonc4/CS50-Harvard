@@ -1,0 +1,4 @@
+first: Ask user for height;
+then: If height informed is less than 1 or greater than 8 (or not even an integer), ask again;
+number is valid: Iterate from 1 through height informed:
+    Print x hashes through iterations and then a newline

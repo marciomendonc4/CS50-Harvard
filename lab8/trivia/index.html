@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                // Part 1
+                let answers = document.querySelector('#buttons').querySelectorAll('button');
+                let msg1 = document.querySelector('#response1');
+                for (const answer of answers){
+                    answer.addEventListener('click', function(){
+                        if (answer.innerText == 'Charles Dickens'){
+                            answer.style.backgroundColor = 'green';
+                            msg1.innerText = 'Correct!';
+                        }
+                        else{
+                            answer.style.backgroundColor = 'red';
+                            msg1.innerText = 'Incorrect.';
+                            answer.addEventListener('mouseout', function(){
+                                answer.style.backgroundColor = '#d9edff';
+                            });
+                        }
+                    });
+                }
+
+                //Part 2
+                let part2 = document.querySelector('#check');
+                let msg2 = document.querySelector('#response2');
+                part2.addEventListener('click', function(){
+                    let user_input = document.querySelector('#answer');
+                    if (user_input.value.toLowerCase() == 'millenium falcon'){
+                        part2.style.backgroundColor = 'green';
+                        msg2.innerText = 'Correct!';
+                    }
+                    else{
+                        part2.style.backgroundColor = 'red';
+                        msg2.innerText = 'Incorrect.';
+                    }
+                });
+
+                //Part 3
+                let radios = document.querySelectorAll('input[type=radio][name="opt"]');
+                let part3 = document.querySelector('#send');
+                let msg3 = document.querySelector('#response3')
+                radios.forEach(radio => radio.addEventListener('change', function(){
+                    if(radio.value == 'sperm-whale'){
+                        send.addEventListener('click', function(){
+                            send.style.backgroundColor = 'green'
+                            msg3.innerText = 'Correct!';
+                        });
+                    }
+                    else{
+                        send.addEventListener('click', function(){
+                            send.style.backgroundColor = 'red';
+                            msg3.innerText = 'Incorrect.';
+                            send.addEventListener('mouseout', function(){
+                                send.style.backgroundColor = '#d9edff';
+                            });
+                        });
+                    }
+                }));
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+            <p id="name">by Marcio Mendonça</p>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="section">
+                    <h2>Part 1: Multiple Choice </h2>
+                    <hr>
+                    <!-- TODO: Add multiple choice question here -->
+                    <h3 class="enunciate">What is the name of the author of the David Copperfield book?</h3>
+                    <div id="buttons">
+                        <button>Ernest Hemingway</button>
+                        <button>Scott Fitzgerald</button>
+                        <button>Charles Dickens</button>
+                        <button>Harper Lee</button>
+                        <button>Stephen King</button>
+                        <p id='response1'></p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Part 2: Free Response</h2>
+                    <hr>
+                    <!-- TODO: Add free response question here -->
+                    <h3 class="enunciate">In <strong>Star Wars</strong> what is the name of the spaceship piloted by <strong>Han Solo</strong>?</h3>
+                    <input type="text" id="answer">
+                    <button id="check">Check</button>
+                    <p id="response2"></p>
+                </div>
+
+                <!-- Part 3 -->
+                <div class="part3">
+                    <h2> Part 3: Multiple Choice</h2>
+                    <hr>
+
+                    <h3 class="enunciate">What is the <strong>loudest</strong> animal on Earth?</h3>
+                    <div id="option">
+                        <input type="radio" id="sperm-whale" value="sperm-whale" name="opt">
+                        <label>Sperm Whale</label><br>
+                        <input type="radio" value="cicada" name="opt">
+                        <label>Cicada</label><br>
+                        <input type="radio" value="hyena" name="opt">
+                        <label>Hyena</label><br>
+                        <input type="radio" value="chimpanzee" name="opt">
+                        <label>Chimpanzee</label><br>
+                        <input type="radio" value="elephant" name="opt">
+                        <label>Elephant</label><br>
+                        <button id="send">Check</button>
+                        <p id="response3"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

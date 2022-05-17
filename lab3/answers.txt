@@ -1,0 +1,11 @@
+sort1 uses: BUBBLE SORT
+
+How do you know?: Because in the best case scenario (a perfectly sorted array), the bubble sort method has the best time (order of n)
+
+sort2 uses: MERGE SORT
+
+How do you know?: Because in the most adverse situations (a random or reversed array) the merge sorte proves to be the fastest (order of n*log n)
+
+sort3 uses: SELECTION SORT
+
+How do you know?: Because even in the best conditions (a perfectly sorted array), by its nature, the selection sort has the worst time (order of n²)

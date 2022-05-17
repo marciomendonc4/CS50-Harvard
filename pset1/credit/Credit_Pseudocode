@@ -1,0 +1,10 @@
+Pseudocode for credit
+
+1. Collect number from user : do...while
+2. Check the validity of the number:
+    a) If valid : print out the brand. Else: INVALID.
+3. Create functions:
+    a) find the length of the credit card;
+    b) perform the Luhn's Algorithm;
+    c) check the validity;
+    d) determine which brand.
