@@ -1,4 +1,4 @@
-[PT/BR]#(pt-br)
+[PT/BR](#pt-br)
 
 # CS50 Harvard
 
