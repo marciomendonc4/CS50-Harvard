@@ -1,4 +1,4 @@
-[PT/BR]#pt-br
+[PT/BR]#(pt-br)
 
 # CS50 Harvard
 
@@ -23,7 +23,7 @@
 - [Week 9]()
 - [Week 10]()
 
-
+#
 #### PT BR
 
 ### Computer Science 50 (Ciência da Computação 50), ministrado pelas Universidades Harvard e Yale, é um dos maiores cursos online do mundo.
